@@ -15,14 +15,14 @@ t: Tetration (labeled as t because ↑ is not part of default Windows keyboard l
 # Build process
 
 ## Cloning the repository
-Type in `git clone https://github.com/ttaute/math` in your shell or click on "Code", then "Download ZIP".
+Type `git clone https://github.com/ttaute/math` in your shell or click on "Code", then "Download ZIP".
 
 ## Building the program
 The main building environment used here is Visual Studio 2022. It will give you the least amount of pain.<br>
 Simply open up the project and press F5 (or Alt > Debug > Start (without) Debugging if your keyboard has no function keys).<br>
 
 ### Alternate build process
-Alternatively, you could try building with another C++ compiler. You need to include every .cpp file in the command however.<br>
+Alternatively, you could try building with another C++ compiler. You need to include every .cpp file in your build command however.<br>
 Most likely, the file inclusion is going to be `math/*.cpp` or `math\*.cpp` for you.
 
 #### Requirements for your C++ compiler
@@ -31,8 +31,11 @@ It needs to support:<br>
 * The headers iostream, memory, sstream and string
 
 ## Building the code documentation
-This program uses Doxygen to generate the code documentation.<br>
-A Doxyfile is already provided in this repository. <br>
-To build it, type the following into your shell: `doxygen Doxyfile`<br>
-Alternatively, open the file into the Doxygen wizard and pick your working and output directories.<br>
+This program uses Doxygen to generate the code documentation.
+A Doxyfile is already provided in this repository.
+
+To build it, type the following into your shell: `doxygen Doxyfile`
+
+Alternatively, open the file into the Doxygen wizard and pick your working and output directories.
+
 It will generate HTML documentation and manpages.

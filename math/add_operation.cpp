@@ -1,4 +1,5 @@
 #include "add_operation.h"
+#include <iostream>
 
 int add_operation::calculate(int a, int b) const
 {
@@ -6,6 +7,7 @@ int add_operation::calculate(int a, int b) const
 		return a;
 	}
 	else {
-		return calculate(a, b - 1) + 1;
+		int result = calculate(a, b - 1);
+		return result + 1;
 	}
 }

@@ -70,7 +70,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="readme.md" />
     <None Include="..\Doxyfile" />
+    <None Include="..\readme.md" />
   </ItemGroup>
 </Project>

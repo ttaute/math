@@ -34,7 +34,7 @@ std::shared_ptr<operation> operator_factory::create(char c)
 		op = std::make_unique<tet_operation>();
 		break;
 	default:
-		throw std::runtime_error("Ungültiger Operator");
+		throw std::runtime_error("Invalid operator");
 		break;
 	}
 	return op;

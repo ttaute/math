@@ -15,7 +15,7 @@ t: Tetration (labeled as t because ↑ is not part of default Windows keyboard l
 # Build process
 
 ## Cloning the repository
-Type `git clone https://github.com/ttaute/math` in your shell or click on "Code", then "Download ZIP".
+Type `git clone https://github.com/ttaute/math` in your shell or click on "Code", then on one of the options in here.
 
 ## Building the program
 The main building environment used here is Visual Studio 2022. It will give you the least amount of pain.<br>

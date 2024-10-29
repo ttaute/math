@@ -10,7 +10,7 @@ the base function to accomplish their tasks.
 -: Subtraction<br>
 \*: Multiplication<br>
 ^: Exponentation<br>
-t: Tetration (labeled as t because ↑ is not part of default Windows keyboard layouts or character sets)
+t: Tetration (labeled as t because ↑ is not part of default Windows keyboard layouts or non-Unicode character sets)
 
 # Build process
 

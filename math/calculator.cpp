@@ -7,6 +7,7 @@
 #include "add_operation.h"
 #include "sub_operation.h"
 #include "mul_operation.h"
+#include "div_operation.h"
 #include "pow_operation.h"
 #include "tet_operation.h"
 

@@ -4,6 +4,7 @@
 #include "add_operation.h"
 #include "sub_operation.h"
 #include "mul_operation.h"
+#include "div_operation.h"
 #include "pow_operation.h"
 #include "tet_operation.h"
 
@@ -26,6 +27,9 @@ std::shared_ptr<operation> operator_factory::create(char c)
 		break;
 	case '*':
 		op = std::make_unique<mul_operation>();
+		break;
+	case '/':
+		op = std::make_unique<div_operation>();
 		break;
 	case '^':
 		op = std::make_unique<pow_operation>();

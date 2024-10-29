@@ -12,6 +12,10 @@ the base function to accomplish their tasks.
 ^: Exponentation<br>
 t: Tetration (labeled as t because ↑ is not part of default Windows keyboard layouts or non-Unicode character sets)
 
+In progress:
+
+/: Division (bug: negative numbers always result in -1 due to it being the return value) 
+
 # Build process
 
 ## Cloning the repository
@@ -39,3 +43,8 @@ To build it, type the following into your shell: `doxygen Doxyfile`
 Alternatively, open the file into the Doxygen wizard and pick your working and output directories.
 
 It will generate HTML documentation and manpages.
+
+## License
+This program is licensed unter the MIT License.
+
+A copy of it can be found under LICENSE.

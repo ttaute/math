@@ -3,7 +3,10 @@
 
 int add_operation::calculate(int a, int b) const
 {
-	if (b == 0) {
+	if (b < 0) {
+		throw std::runtime_error("Number b is negative");
+	}
+	else if (b == 0) {
 		return a;
 	}
 	else {

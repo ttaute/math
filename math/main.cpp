@@ -10,7 +10,12 @@ int main()
         std::string input;
         std::getline(std::cin, input);
         calculator calculator;
-        std::cout << calculator.calculate(input);
+        try {
+            std::cout << calculator.calculate(input);
+        }
+        catch (const std::exception& ex) {
+            std::cout << "Error: " << ex.what() << "\n";
+        }
         std::cout << "\n\n";
     }
 }

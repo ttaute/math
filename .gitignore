@@ -8,3 +8,6 @@ Debug/
 Release/
 x64/
 x86/
+ARM/
+ARM64/
+ARM64EC/

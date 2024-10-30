@@ -36,7 +36,7 @@ Alternatively, open the file into the Doxygen wizard and pick your working and o
 It will generate HTML documentation and manpages.
 
 ## License
-This program is licensed unter the MIT License.
+This program is licensed under the MIT License.
 
 A copy of it can be found under LICENSE.
 

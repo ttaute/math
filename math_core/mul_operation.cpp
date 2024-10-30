@@ -10,8 +10,11 @@ int mul_operation::calculate(int a, int b) const
 	else if (b == 0 || a == 0) {
 		return 0;
 	}
-	else if (b == 1 || a == 1) {
+	else if (b == 1) {
 		return a;
+	}
+	else if (a == 1) {
+		return b;
 	}
 	else {
 		add_operation op;

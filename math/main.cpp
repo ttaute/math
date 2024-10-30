@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include "calculator.h"
+#include "../math_core/calculator.h"
 
 int main()
 {

@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3f3a99d7-a198-4212-803b-68a91ee79182}</ProjectGuid>
-    <RootNamespace>math</RootNamespace>
+    <ProjectGuid>{46593e93-e143-437b-bbf7-a23bf57ec5a6}</ProjectGuid>
+    <RootNamespace>mathtests</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,16 +127,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Doxyfile" />
-    <None Include="..\readme.md" />
+    <ClCompile Include="add_test.cpp" />
+    <ClCompile Include="calculator_test.cpp" />
+    <ClCompile Include="div_test.cpp" />
+    <ClCompile Include="math_tests.cpp" />
+    <ClCompile Include="mul_test.cpp" />
+    <ClCompile Include="operator_factory_test.cpp" />
+    <ClCompile Include="pow_test.cpp" />
+    <ClCompile Include="sub_test.cpp" />
+    <ClCompile Include="tet_test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\math_core\math_core.vcxproj">
       <Project>{9de126c4-7062-4ac0-9e92-ebc0a37f1070}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="doctest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

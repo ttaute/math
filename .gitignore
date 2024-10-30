@@ -4,5 +4,7 @@
 
 /.vs
 /doc
-/math/x64
-/x64
+Debug/
+Release/
+x64/
+x86/

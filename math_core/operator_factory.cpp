@@ -7,6 +7,7 @@
 #include "div_operation.h"
 #include "pow_operation.h"
 #include "tet_operation.h"
+#include <stdexcept>
 
 std::shared_ptr<operator_factory> operator_factory::getInstance()
 {
@@ -38,7 +39,7 @@ std::shared_ptr<operation> operator_factory::create(char c)
 		op = std::make_unique<tet_operation>();
 		break;
 	default:
-		throw std::runtime_error("Invalid operator");
+		throw std::invalid_argument("Invalid operator");
 		break;
 	}
 	return op;

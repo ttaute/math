@@ -59,8 +59,6 @@ jobs:
         release_name: Latest build
         body: This is the latest successful build.
         files: |
-          LICENSE
-          readme.md
           x64/Release/*.exe
           x64/Release/*.pdb
           x64/Release/*.lib

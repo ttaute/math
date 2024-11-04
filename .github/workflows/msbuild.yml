@@ -43,6 +43,11 @@ jobs:
       # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
       run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
 
+    - name: Run tests
+      id: tests
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      run: ${{env.SOLUTION_FILE_PATH}}\x64\Release\math_tests.exe
+
     - name: Upload artifact binaries
       uses: actions/upload-artifact@v4
       with:

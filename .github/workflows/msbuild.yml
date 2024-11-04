@@ -60,5 +60,3 @@ jobs:
         body: This is the latest successful build.
         files: |
           x64/Release/*.exe
-          x64/Release/*.pdb
-          x64/Release/*.lib

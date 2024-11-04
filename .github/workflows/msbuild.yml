@@ -21,7 +21,7 @@ env:
   BUILD_CONFIGURATION: Release
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -55,7 +55,9 @@ jobs:
     - name: Make a new release
       uses: softprops/action-gh-release@v2
       with:
-        body: Newest build
+        tag_name: latest
+        release_name: Latest build
+        body: This is the latest successful build.
         files: |
           LICENSE
           readme.md

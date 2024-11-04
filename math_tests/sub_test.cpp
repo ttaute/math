@@ -15,7 +15,7 @@ TEST_SUITE("sub_operation") {
 			CHECK(op.calculate(8, 0) == 8 - 0);
 		}
 		SUBCASE("large_int") {
-			CHECK(op.calculate(2392, 875) == 2392 - 865);
+			CHECK(op.calculate(2392, 875) == 2392 - 875);
 		}
 		SUBCASE("int_a_negative") {
 			CHECK(op.calculate(-64, 111) == -64 - 111);

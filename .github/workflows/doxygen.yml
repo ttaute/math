@@ -23,9 +23,3 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         path: doc/math
-
-    - name: Upload documentation to website
-      uses: EndBug/add-and-commit@v9
-      with:
-        add: 'doc'
-        default_author: github_actions

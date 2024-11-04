@@ -60,3 +60,5 @@ jobs:
         body: This is the latest successful build.
         files: |
           x64/Release/*.exe
+
+

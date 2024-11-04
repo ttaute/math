@@ -44,7 +44,6 @@ jobs:
       run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
 
     - name: Run tests
-      id: tests
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: ${{env.SOLUTION_FILE_PATH}}\x64\Release\math_tests.exe
 
@@ -52,3 +51,14 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         path: x64/Release
+
+    - name: Make a new release
+      uses: softprops/action-gh-release@v2
+      with:
+        body: Newest build
+        files: |
+          LICENSE
+          readme.md
+          x64/Release/*.exe
+          x64/Release/*.pdb
+          x64/Release/*.lib

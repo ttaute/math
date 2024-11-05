@@ -35,13 +35,13 @@ Alternatively, open the file into the Doxygen wizard and pick your working and o
 
 It will generate HTML documentation and manpages.
 
-## Badges with barely any value for anything but development
+# Badges with barely any value for anything but development
 ![Can this program compile?](https://github.com/ttaute/math/actions/workflows/msbuild.yml/badge.svg)
 
-## License
+# License
 This program is licensed under the MIT License.
 
 A copy of it can be found under LICENSE.
 
-## Credits
+# Credits
 This program uses [doctest](https://github.com/doctest/doctest) to build unit tests.

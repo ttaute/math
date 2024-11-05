@@ -35,6 +35,9 @@ Alternatively, open the file into the Doxygen wizard and pick your working and o
 
 It will generate HTML documentation and manpages.
 
+## Badges with barely any value for anything but development
+![Can this program compile?](https://github.com/ttaute/math/actions/workflows/msbuild.yml/badge.svg)
+
 ## License
 This program is licensed under the MIT License.
 

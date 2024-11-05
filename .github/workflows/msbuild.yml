@@ -16,22 +16,18 @@ env:
   # Path to the solution file relative to the root of the project.
   SOLUTION_FILE_PATH: .
 
+  # Configuration type to build.
+  # You can convert this to a build matrix if you need coverage of multiple configuration types.
+  # https://docs.github.com/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
+  BUILD_CONFIGURATION: Release
+
 permissions:
   contents: write
 
 jobs:
   build:
-    strategy:
-      matrix:
-        releases: [Debug, Release]
     runs-on: windows-latest
 
-    env:
-      # Configuration type to build.
-      # You can convert this to a build matrix if you need coverage of multiple configuration types.
-      # https://docs.github.com/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
-      BUILD_CONFIGURATION: Release
-      
     steps:
     - uses: actions/checkout@v4
 
@@ -51,11 +47,11 @@ jobs:
     - name: Run tests
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: ${{env.SOLUTION_FILE_PATH}}\x64\Release\math_tests.exe
-      
+
     - name: Upload artifact binaries
       uses: actions/upload-artifact@v4
       with:
-        path: x64/Release/*.exe
+        path: x64/Release
 
     - name: Make a new release
       uses: softprops/action-gh-release@v2
@@ -65,5 +61,3 @@ jobs:
         body: This is the latest successful build.
         files: |
           x64/Release/*.exe
-
-

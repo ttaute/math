@@ -37,6 +37,19 @@ jobs:
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: nuget restore ${{env.SOLUTION_FILE_PATH}}
 
+    - name: Build cppcheck
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      shell: cmd
+      run: gh repo clone https://github.com/danmar/cppcheck external/cppcheck && cd external\cppcheck && msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
+
+    - name: Run cppcheck on main
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      run: ${{env.SOLUTION_FILE_PATH}}\external\cppcheck\bin\debug\cppcheck.exe .\math 
+      
+    - name: Run cppcheck on math_core
+      working-directory: ${{env.GITHUB_WORKSPACE}}
+      run: ${{env.SOLUTION_FILE_PATH}}\external\cppcheck\bin\debug\cppcheck.exe .\math_core
+    
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
       # Add additional options to the MSBuild command line here (like platform or verbosity level).

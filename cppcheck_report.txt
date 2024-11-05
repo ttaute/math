@@ -1,0 +1,344 @@
+math/main.cpp:8:31: warning: Redundant assignment of 'd' to itself. [selfAssignment]
+    for (int d = 0; d <= 1; d = d) {
+                              ^
+math_core/calculator.h:11:7: performance:inconclusive: Technically the member function 'calculator::calculate' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+  int calculate(std::string input);
+      ^
+math_core/calculator.cpp:14:17: note: Technically the member function 'calculator::calculate' can be static (but you may consider moving to unnamed namespace).
+int calculator::calculate(std::string input)
+                ^
+math_core/calculator.h:11:7: note: Technically the member function 'calculator::calculate' can be static (but you may consider moving to unnamed namespace).
+  int calculate(std::string input);
+      ^
+math_tests/add_test.cpp:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 53 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+math_tests/doctest.h:854:18: style:inconclusive: Technically the member function 'doctest::AssertData::StringContains::check' can be const. [functionConst]
+            bool check(const String& str) { return isContains ? (content == str) : (content.string == str); }
+                 ^
+math_tests/doctest.h:625:5: style: Class 'String' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    String(const char* in);
+    ^
+math_tests/doctest.h:851:13: style: Class 'StringContains' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+            StringContains(const String& str) : content(str), isContains(false) { }
+            ^
+math_tests/doctest.h:852:13: style: Class 'StringContains' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+            StringContains(Contains cntn) : content(static_cast<Contains&&>(cntn)), isContains(true) { }
+            ^
+math_tests/doctest.h:1211:5: style: Struct 'Approx' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    Approx(double value);
+    ^
+math_tests/doctest.h:1401:9: style: Struct 'Result' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+        Result(bool passed, const String& decomposition = String());
+        ^
+math_tests/doctest.h:1574:9: style: Struct 'ExpressionDecomposer' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+        ExpressionDecomposer(assertType::Enum at);
+        ^
+math_tests/doctest.h:1294:5: style: Struct 'IsNaN < float >' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    IsNaN(F f, bool flip = false) : value(f), flipped(flip) { }
+    ^
+math_tests/doctest.h:1294:5: style: Struct 'IsNaN < double >' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    IsNaN(F f, bool flip = false) : value(f), flipped(flip) { }
+    ^
+math_tests/doctest.h:1294:5: style: Struct 'IsNaN < long double >' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+    IsNaN(F f, bool flip = false) : value(f), flipped(flip) { }
+    ^
+math_tests/doctest.h:1011:42: style: Parameter 'os' can be declared with const [constParameter]
+        static void insert(std::ostream& os, const T& t) { ::operator<<(os, t); }
+                                         ^
+math_tests/doctest.h:1016:42: style: Parameter 'os' can be declared with const [constParameter]
+        static void insert(std::ostream& os, const T& t) { operator<<(os, t); }
+                                         ^
+math_tests/add_test.cpp:7:17: style: Unused variable: op [unusedVariable]
+  add_operation op;
+                ^
+math_tests/doctest.h:5970:9: warning: Member variable 'ConsoleReporter::hasLoggedCurrentTestStart' is not initialized in the constructor. [uninitMemberVar]
+        ConsoleReporter(const ContextOptions& co)
+        ^
+math_tests/doctest.h:5970:9: warning: Member variable 'ConsoleReporter::currentSubcaseLevel' is not initialized in the constructor. [uninitMemberVar]
+        ConsoleReporter(const ContextOptions& co)
+        ^
+math_tests/doctest.h:5970:9: warning: Member variable 'ConsoleReporter::tc' is not initialized in the constructor. [uninitMemberVar]
+        ConsoleReporter(const ContextOptions& co)
+        ^
+math_tests/doctest.h:5974:9: warning: Member variable 'ConsoleReporter::hasLoggedCurrentTestStart' is not initialized in the constructor. [uninitMemberVar]
+        ConsoleReporter(const ContextOptions& co, std::ostream& ostr)
+        ^
+math_tests/doctest.h:5974:9: warning: Member variable 'ConsoleReporter::currentSubcaseLevel' is not initialized in the constructor. [uninitMemberVar]
+        ConsoleReporter(const ContextOptions& co, std::ostream& ostr)
+        ^
+math_tests/doctest.h:5974:9: warning: Member variable 'ConsoleReporter::tc' is not initialized in the constructor. [uninitMemberVar]
+        ConsoleReporter(const ContextOptions& co, std::ostream& ostr)
+        ^
+math_tests/doctest.h:6789:5: warning: Member variable 'DiscardOStream::discardBuf' is not initialized in the constructor. [uninitMemberVar]
+    DiscardOStream()
+    ^
+math_tests/doctest.h:6773:5: style: The class 'Anonymous0' does not have a constructor although it has private member variables. [noConstructor]
+    class : public std::streambuf
+    ^
+math_tests/doctest.h:3439:5: style: The class 'MultiLaneAtomic < int >' does not have a constructor although it has private member variables. [noConstructor]
+    class MultiLaneAtomic
+    ^
+math_tests/doctest.h:4309:9: performance: Variable 'm_type' is assigned in constructor body. Consider performing initialization in initialization list. [useInitializationList]
+        m_type        = type;
+        ^
+math_tests/doctest.h:1989:10: style:inconclusive: Technically the member function 'doctest::Context::shouldExit' can be const. [functionConst]
+    bool shouldExit();
+         ^
+math_tests/doctest.h:6762:15: note: Technically the member function 'doctest::Context::shouldExit' can be const.
+bool Context::shouldExit() { return p->exit; }
+              ^
+math_tests/doctest.h:1989:10: note: Technically the member function 'doctest::Context::shouldExit' can be const.
+    bool shouldExit();
+         ^
+math_tests/doctest.h:1991:10: style:inconclusive: Technically the member function 'doctest::Context::setAsDefaultForAssertsOutOfTestCases' can be const. [functionConst]
+    void setAsDefaultForAssertsOutOfTestCases();
+         ^
+math_tests/doctest.h:6764:15: note: Technically the member function 'doctest::Context::setAsDefaultForAssertsOutOfTestCases' can be const.
+void Context::setAsDefaultForAssertsOutOfTestCases() { g_cs = p; }
+              ^
+math_tests/doctest.h:1991:10: note: Technically the member function 'doctest::Context::setAsDefaultForAssertsOutOfTestCases' can be const.
+    void setAsDefaultForAssertsOutOfTestCases();
+         ^
+math_tests/doctest.h:5040:9: style: Class 'XmlEncode' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+        XmlEncode( std::string const& str, ForWhat forWhat = ForTextNodes );
+        ^
+math_tests/doctest.h:5056:13: style: Class 'ScopedElement' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+            ScopedElement( XmlWriter* writer );
+            ^
+math_tests/doctest.h:5424:9: style: Struct 'XmlReporter' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+        XmlReporter(const ContextOptions& co)
+        ^
+math_tests/doctest.h:5798:9: style: Struct 'JUnitReporter' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+        JUnitReporter(const ContextOptions& co)
+        ^
+math_tests/doctest.h:5970:9: style: Struct 'ConsoleReporter' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+        ConsoleReporter(const ContextOptions& co)
+        ^
+math_tests/doctest.h:3327:16: style: Condition '*ptr' is always true [knownConditionTrueFalse]
+            if(*ptr)
+               ^
+math_tests/doctest.h:3324:21: note: Assignment 'x=1', assigned value is 1
+            int x = 1;
+                    ^
+math_tests/doctest.h:3327:16: note: Condition '*ptr' is always true
+            if(*ptr)
+               ^
+math_tests/doctest.h:3804:34: style:inconclusive: Function 'Contains' argument 1 names different: declaration 'string' definition 'str'. [funcArgNamesDifferent]
+Contains::Contains(const String& str) : string(str) { }
+                                 ^
+math_tests/doctest.h:676:37: note: Function 'Contains' argument 1 names different: declaration 'string' definition 'str'.
+    explicit Contains(const String& string);
+                                    ^
+math_tests/doctest.h:3804:34: note: Function 'Contains' argument 1 names different: declaration 'string' definition 'str'.
+Contains::Contains(const String& str) : string(str) { }
+                                 ^
+math_tests/doctest.h:7071:53: style:inconclusive: Function 'registerReporterImpl' argument 2 names different: declaration 'prio' definition 'priority'. [funcArgNamesDifferent]
+    void registerReporterImpl(const char* name, int priority, reporterCreatorFunc c, bool isReporter) {
+                                                    ^
+math_tests/doctest.h:2101:71: note: Function 'registerReporterImpl' argument 2 names different: declaration 'prio' definition 'priority'.
+    DOCTEST_INTERFACE void registerReporterImpl(const char* name, int prio, reporterCreatorFunc c, bool isReporter);
+                                                                      ^
+math_tests/doctest.h:7071:53: note: Function 'registerReporterImpl' argument 2 names different: declaration 'prio' definition 'priority'.
+    void registerReporterImpl(const char* name, int priority, reporterCreatorFunc c, bool isReporter) {
+                                                    ^
+math_tests/doctest.h:852:37: performance: Function parameter 'cntn' should be passed by const reference. [passedByValue]
+            StringContains(Contains cntn) : content(static_cast<Contains&&>(cntn)), isContains(true) { }
+                                    ^
+math_tests/doctest.h:4191:21: style: Consider using std::accumulate algorithm instead of a raw loop. [useStlAlgorithm]
+            running = hash(running, hash(sig));
+                    ^
+math_tests/doctest.h:6876:19: style: Consider using std::transform algorithm instead of a raw loop. [useStlAlgorithm]
+        testArray.push_back(&curr);
+                  ^
+math_tests/doctest.h:3469:24: style: Consider using std::accumulate algorithm instead of a raw loop. [useStlAlgorithm]
+                result += c.atomic.load(order);
+                       ^
+math_tests/calculator_test.cpp:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 53 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+math_tests/calculator_test.cpp:6:14: style: Unused variable: calc [unusedVariable]
+  calculator calc;
+             ^
+math_tests/div_test.cpp:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 53 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+math_tests/div_test.cpp:7:17: style: Unused variable: op [unusedVariable]
+  div_operation op;
+                ^
+math_tests/math_tests.cpp:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 52 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+math_tests/doctest.h:4024:10: warning: Member variable 'Context::p' is not initialized in the constructor. [uninitMemberVar]
+Context::Context(int, const char* const*) {}
+         ^
+math_tests/doctest.h:1981:10: performance:inconclusive: Technically the member function 'doctest::Context::applyCommandLine' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    void applyCommandLine(int argc, const char* const* argv);
+         ^
+math_tests/doctest.h:4026:15: note: Technically the member function 'doctest::Context::applyCommandLine' can be static (but you may consider moving to unnamed namespace).
+void Context::applyCommandLine(int, const char* const*) {}
+              ^
+math_tests/doctest.h:1981:10: note: Technically the member function 'doctest::Context::applyCommandLine' can be static (but you may consider moving to unnamed namespace).
+    void applyCommandLine(int argc, const char* const* argv);
+         ^
+math_tests/doctest.h:1983:10: performance:inconclusive: Technically the member function 'doctest::Context::addFilter' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    void addFilter(const char* filter, const char* value);
+         ^
+math_tests/doctest.h:4027:15: note: Technically the member function 'doctest::Context::addFilter' can be static (but you may consider moving to unnamed namespace).
+void Context::addFilter(const char*, const char*) {}
+              ^
+math_tests/doctest.h:1983:10: note: Technically the member function 'doctest::Context::addFilter' can be static (but you may consider moving to unnamed namespace).
+    void addFilter(const char* filter, const char* value);
+         ^
+math_tests/doctest.h:1984:10: performance:inconclusive: Technically the member function 'doctest::Context::clearFilters' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    void clearFilters();
+         ^
+math_tests/doctest.h:4028:15: note: Technically the member function 'doctest::Context::clearFilters' can be static (but you may consider moving to unnamed namespace).
+void Context::clearFilters() {}
+              ^
+math_tests/doctest.h:1984:10: note: Technically the member function 'doctest::Context::clearFilters' can be static (but you may consider moving to unnamed namespace).
+    void clearFilters();
+         ^
+math_tests/doctest.h:1985:10: performance:inconclusive: Technically the member function 'doctest::Context::setOption' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    void setOption(const char* option, bool value);
+         ^
+math_tests/doctest.h:4029:15: note: Technically the member function 'doctest::Context::setOption' can be static (but you may consider moving to unnamed namespace).
+void Context::setOption(const char*, bool) {}
+              ^
+math_tests/doctest.h:1985:10: note: Technically the member function 'doctest::Context::setOption' can be static (but you may consider moving to unnamed namespace).
+    void setOption(const char* option, bool value);
+         ^
+math_tests/doctest.h:1986:10: performance:inconclusive: Technically the member function 'doctest::Context::setOption' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    void setOption(const char* option, int value);
+         ^
+math_tests/doctest.h:4030:15: note: Technically the member function 'doctest::Context::setOption' can be static (but you may consider moving to unnamed namespace).
+void Context::setOption(const char*, int) {}
+              ^
+math_tests/doctest.h:1986:10: note: Technically the member function 'doctest::Context::setOption' can be static (but you may consider moving to unnamed namespace).
+    void setOption(const char* option, int value);
+         ^
+math_tests/doctest.h:1987:10: performance:inconclusive: Technically the member function 'doctest::Context::setOption' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    void setOption(const char* option, const char* value);
+         ^
+math_tests/doctest.h:4031:15: note: Technically the member function 'doctest::Context::setOption' can be static (but you may consider moving to unnamed namespace).
+void Context::setOption(const char*, const char*) {}
+              ^
+math_tests/doctest.h:1987:10: note: Technically the member function 'doctest::Context::setOption' can be static (but you may consider moving to unnamed namespace).
+    void setOption(const char* option, const char* value);
+         ^
+math_tests/doctest.h:1989:10: performance:inconclusive: Technically the member function 'doctest::Context::shouldExit' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    bool shouldExit();
+         ^
+math_tests/doctest.h:4032:15: note: Technically the member function 'doctest::Context::shouldExit' can be static (but you may consider moving to unnamed namespace).
+bool Context::shouldExit() { return false; }
+              ^
+math_tests/doctest.h:1989:10: note: Technically the member function 'doctest::Context::shouldExit' can be static (but you may consider moving to unnamed namespace).
+    bool shouldExit();
+         ^
+math_tests/doctest.h:1991:10: performance:inconclusive: Technically the member function 'doctest::Context::setAsDefaultForAssertsOutOfTestCases' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    void setAsDefaultForAssertsOutOfTestCases();
+         ^
+math_tests/doctest.h:4033:15: note: Technically the member function 'doctest::Context::setAsDefaultForAssertsOutOfTestCases' can be static (but you may consider moving to unnamed namespace).
+void Context::setAsDefaultForAssertsOutOfTestCases() {}
+              ^
+math_tests/doctest.h:1991:10: note: Technically the member function 'doctest::Context::setAsDefaultForAssertsOutOfTestCases' can be static (but you may consider moving to unnamed namespace).
+    void setAsDefaultForAssertsOutOfTestCases();
+         ^
+math_tests/doctest.h:1993:10: performance:inconclusive: Technically the member function 'doctest::Context::setAssertHandler' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    void setAssertHandler(detail::assert_handler ah);
+         ^
+math_tests/doctest.h:4034:15: note: Technically the member function 'doctest::Context::setAssertHandler' can be static (but you may consider moving to unnamed namespace).
+void Context::setAssertHandler(detail::assert_handler) {}
+              ^
+math_tests/doctest.h:1993:10: note: Technically the member function 'doctest::Context::setAssertHandler' can be static (but you may consider moving to unnamed namespace).
+    void setAssertHandler(detail::assert_handler ah);
+         ^
+math_tests/doctest.h:1995:10: performance:inconclusive: Technically the member function 'doctest::Context::setCout' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    void setCout(std::ostream* out);
+         ^
+math_tests/doctest.h:4035:15: note: Technically the member function 'doctest::Context::setCout' can be static (but you may consider moving to unnamed namespace).
+void Context::setCout(std::ostream*) {}
+              ^
+math_tests/doctest.h:1995:10: note: Technically the member function 'doctest::Context::setCout' can be static (but you may consider moving to unnamed namespace).
+    void setCout(std::ostream* out);
+         ^
+math_tests/doctest.h:1997:9: performance:inconclusive: Technically the member function 'doctest::Context::run' can be static (but you may consider moving to unnamed namespace). [functionStatic]
+    int run();
+        ^
+math_tests/doctest.h:4036:15: note: Technically the member function 'doctest::Context::run' can be static (but you may consider moving to unnamed namespace).
+int  Context::run() { return 0; }
+              ^
+math_tests/doctest.h:1997:9: note: Technically the member function 'doctest::Context::run' can be static (but you may consider moving to unnamed namespace).
+    int run();
+        ^
+math_tests/doctest.h:4434:17: performance: Variable 'stdoutHandle' is assigned in constructor body. Consider performing initialization in initialization list. [useInitializationList]
+                stdoutHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+                ^
+math_tests/doctest.h:3381:0: information: Skipping configuration 'DOCTEST_CONFIG_GETCURRENTTICKS' since the value of 'DOCTEST_CONFIG_GETCURRENTTICKS' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    ticks_t getCurrentTicks() { return DOCTEST_CONFIG_GETCURRENTTICKS(); }
+^
+math_tests/doctest.h:3289:0: information: Skipping configuration 'DOCTEST_CONFIG_HANDLE_EXCEPTION' since the value of 'DOCTEST_CONFIG_HANDLE_EXCEPTION' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        DOCTEST_CONFIG_HANDLE_EXCEPTION(e);
+^
+math_tests/mul_test.cpp:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 53 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+math_tests/mul_test.cpp:7:17: style: Unused variable: op [unusedVariable]
+  mul_operation op;
+                ^
+math_tests/operator_factory_test.cpp:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 53 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+math_tests/operator_factory_test.cpp:22:17: style: Variable 'instance' is assigned a value that is never used. [unreadVariable]
+  auto instance = operator_factory::getInstance();
+                ^
+math_tests/operator_factory_test.cpp:31:19: style: Variable 'operation' is assigned a value that is never used. [unreadVariable]
+   auto operation = instance->create('+');
+                  ^
+math_tests/operator_factory_test.cpp:35:19: style: Variable 'operation' is assigned a value that is never used. [unreadVariable]
+   auto operation = instance->create('-');
+                  ^
+math_tests/operator_factory_test.cpp:39:19: style: Variable 'operation' is assigned a value that is never used. [unreadVariable]
+   auto operation = instance->create('*');
+                  ^
+math_tests/operator_factory_test.cpp:43:19: style: Variable 'operation' is assigned a value that is never used. [unreadVariable]
+   auto operation = instance->create('/');
+                  ^
+math_tests/operator_factory_test.cpp:47:19: style: Variable 'operation' is assigned a value that is never used. [unreadVariable]
+   auto operation = instance->create('^');
+                  ^
+math_tests/operator_factory_test.cpp:51:19: style: Variable 'operation' is assigned a value that is never used. [unreadVariable]
+   auto operation = instance->create('t');
+                  ^
+math_tests/pow_test.cpp:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 53 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+math_tests/pow_test.cpp:7:17: style: Unused variable: op [unusedVariable]
+  pow_operation op;
+                ^
+math_tests/sub_test.cpp:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 53 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+math_tests/sub_test.cpp:7:17: style: Unused variable: op [unusedVariable]
+  sub_operation op;
+                ^
+math_tests/tet_test.cpp:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 53 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+math_tests/tet_test.cpp:7:17: style: Unused variable: op [unusedVariable]
+  tet_operation op;
+                ^
+math_tests/operator_factory_test.cpp:28:0: style: The function 'DOCTEST_ANON_FUNC_14' is never used. [unusedFunction]
+
+^
+math_tests/add_test.cpp:6:0: style: The function 'DOCTEST_ANON_FUNC_24' is never used. [unusedFunction]
+
+^
+math_tests/operator_factory_test.cpp:28:0: style: The function 'DOCTEST_ANON_FUNC_29' is never used. [unusedFunction]
+
+^
+math_tests/add_test.cpp:6:0: style: The function 'DOCTEST_ANON_FUNC_9' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+

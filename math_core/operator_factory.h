@@ -4,7 +4,7 @@
 
 class operator_factory {
 public:
-	/// @brief Returns static instance of operator_factory
+	/// @brief Returns the static instance of the operator_factory
 	static std::shared_ptr<operator_factory> getInstance();
 
 	/// @brief Creates the correct operation for the given

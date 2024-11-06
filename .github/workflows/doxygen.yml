@@ -42,7 +42,7 @@ jobs:
       with:
         path: ./doc/html
 
-    - name: Delete math repo from worker
+    - name: Remove math folder
       shell: bash
       run: rm -r math
 

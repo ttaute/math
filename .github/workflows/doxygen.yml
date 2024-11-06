@@ -35,8 +35,8 @@ jobs:
     - name: Generate documentation
       uses: mattnotmitt/doxygen-action@v1
       with:
-        working-directory: './math/'
-        doxyfile-path: './math/Doxyfile'
+        working-directory: 'math/'
+        doxyfile-path: 'math/Doxyfile'
 
     - name: Create artifacts
       uses: actions/upload-artifact@v4

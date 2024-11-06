@@ -42,32 +42,13 @@ jobs:
       with:
         path: ./doc/html
 
-    - name: Git status
-      shell: bash
-      run: git status
-
-    - name: Delete math since it is not needed anymore
-      shell: bash
-      run: rm -r math
-
-    - name: Git Configure
-      shell: bash
-      run: git config --global user.email "you@example.com" && git config --global user.name "Your Name"
-
-    - name: Git Add changes
-      shell: bash
-      run: git add --all
-
-    - name: Git create commit
-      shell: bash
-      run: git commit -m "update"
-
-    - name: Git Push
-      shell: bash
-      run: git push
-
-    - name: push documentation
-      uses: mikeal/publish-to-github-action@master
+    - name: Push documentation to website
+      id: pushdoc
+      uses: cpina/github-action-push-to-another-repository@main
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH_NAME: 'main' # your branch name goes here
+        API_TOKEN_GITHUB: ${{ secrets.PAT_PUSH }}
+      with:
+        source-directory: 'doc'
+        destination-github-username: 'ttaute'
+        destination-repository-name: 'ttaute.github.io'
+        commit-message: Pushing documentation generated from math

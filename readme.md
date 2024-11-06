@@ -26,14 +26,13 @@ The main building environment used here is Visual Studio 2022. It will give you 
 Simply open up the project and press Ctrl-Shift-B. The output should be under the target folder (by default \x64\Debug).<br>
 
 ## Building the code documentation
-This program uses Doxygen to generate the code documentation.
-A Doxyfile is already provided in this repository.
-
-To build it, type the following into your shell: `doxygen Doxyfile`
+This program uses Doxygen to generate the code documentation. To build it yourself, type the following into your shell: `doxygen Doxyfile`
 
 Alternatively, open the file into the Doxygen wizard and pick your working and output directories.
 
 It will generate HTML documentation and manpages.
+
+The file `webdoxy` is used by the Doxygen action to generate the same documentation for the website, the only main difference being the output directory.
 
 # Badges with barely any value for anything but development
 ![Can this program compile?](https://github.com/ttaute/math/actions/workflows/msbuild.yml/badge.svg)

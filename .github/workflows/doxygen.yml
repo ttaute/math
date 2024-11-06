@@ -1,0 +1,50 @@
+name: doxygen
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create storage directory for math
+      shell: bash
+      run: mkdir math
+      
+    - name: Grab website repo
+      uses: actions/checkout@v4
+      with:
+        repository: ttaute/ttaute.github.io
+
+    - name: Delete old documentation
+      shell: bash
+      run: rm -r doc
+      
+    - name: Grab math repo
+      uses: actions/checkout@v4
+      with:
+        repository: ttaute/math
+        path: './math'
+
+    - name: Generate documentation
+      uses: mattnotmitt/doxygen-action@v1
+      with:
+        working-directory: 'math/'
+        doxyfile-path: 'math/Doxyfile'
+
+    - name: Create artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        path: ./doc/html
+
+    - name: push documentation
+      uses: mikeal/publish-to-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH_NAME: 'main' # your branch name goes here

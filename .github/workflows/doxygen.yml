@@ -52,6 +52,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.PAT_PUSH }}
       with:
+        source-directory: '.'
         destination-github-username: 'ttaute'
         destination-repository-name: 'ttaute.github.io'
         commit-message: Pushing documentation generated from math

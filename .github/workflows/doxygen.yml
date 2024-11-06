@@ -46,6 +46,22 @@ jobs:
       shell: bash
       run: git status
 
+    - name: Delete math since it is not needed anymore
+      shell: bash
+      run: rm -r math
+
+    - name: Git Add changes
+      shell: bash
+      run: git add --all
+
+    - name: Git create commit
+      shell: bash
+      run: git commit -m "update"
+
+    - name: Git Push
+      shell: bash
+      run: git push
+
     - name: push documentation
       uses: mikeal/publish-to-github-action@master
       env:

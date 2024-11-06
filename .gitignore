@@ -4,6 +4,7 @@
 
 /.vs
 /doc
+/website
 Debug/
 Release/
 x64/

@@ -42,6 +42,10 @@ jobs:
       with:
         path: ./doc/html
 
+    - name: Git status
+      shell: bash
+      run: git status
+
     - name: push documentation
       uses: mikeal/publish-to-github-action@master
       env:

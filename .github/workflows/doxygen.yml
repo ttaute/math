@@ -50,6 +50,10 @@ jobs:
       shell: bash
       run: rm -r math
 
+    - name: Git Configure
+      shell: bash
+      run: git config --global user.email "you@example.com" && git config --global user.name "Your Name"
+
     - name: Git Add changes
       shell: bash
       run: git add --all

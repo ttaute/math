@@ -32,8 +32,6 @@ Alternatively, open the file into the Doxygen wizard and pick your working and o
 
 It will generate HTML documentation and manpages.
 
-The file `webdoxy` is used by the Doxygen action to generate the same documentation for the website, the only main difference being the output directory.
-
 # Badges with barely any value for anything but development
 ![Can this program compile?](https://github.com/ttaute/math/actions/workflows/msbuild.yml/badge.svg)
 

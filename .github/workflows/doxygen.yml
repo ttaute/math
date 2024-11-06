@@ -42,13 +42,16 @@ jobs:
       with:
         path: ./doc/html
 
+    - name: Delete math repo from worker
+      shell: bash
+      run: rm -r math
+
     - name: Push documentation to website
       id: pushdoc
       uses: cpina/github-action-push-to-another-repository@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.PAT_PUSH }}
       with:
-        source-directory: 'doc'
         destination-github-username: 'ttaute'
         destination-repository-name: 'ttaute.github.io'
         commit-message: Pushing documentation generated from math

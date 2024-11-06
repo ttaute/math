@@ -46,13 +46,21 @@ jobs:
       shell: bash
       run: rm -r math
 
+    - name: Create new version folder
+      shell: bash
+      run: mkdir new-version
+
+    - name: Copy everything to new-version
+      shell: bash
+      run: cp -r doc ./new-version/ && cp .gitignore ./new-version/ && cp README.md ./new-version/ && cp index.html ./new-version/
+
     - name: Push documentation to website
       id: pushdoc
       uses: cpina/github-action-push-to-another-repository@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.PAT_PUSH }}
       with:
-        source-directory: '.'
+        source-directory: 'new-version'
         destination-github-username: 'ttaute'
         destination-repository-name: 'ttaute.github.io'
         commit-message: Pushing documentation generated from math
